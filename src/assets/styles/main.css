@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import './fonts.css';
+@import './theme.css';
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+body {
+  font-family: 'Formular', Arial, sans-serif;
+}
