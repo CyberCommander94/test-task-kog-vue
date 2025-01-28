@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+@import './fonts.css';
+@import './theme.css';
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+body {
+  font-family: 'Formular', Arial, sans-serif;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #686d76;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #373a40;
+  border-radius: 8px;
+}

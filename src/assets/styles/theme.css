@@ -1,0 +1,28 @@
+@theme {
+  --font-formular: 'Formular', Arial, sans-serif;
+  --font-formular-medium: 'Formular Medium', Arial, sans-serif;
+  --font-greenwich-medium: 'Greenwich Medium', Arial, sans-serif;
+
+  --breakpoint-*: initial;
+  --breakpoint-xs: 360px;
+  --breakpoint-sm: 577px;
+  --breakpoint-sm-transitional: 800px;
+  --breakpoint-md: 1200px;
+  --breakpoint-lg: 1367px;
+  --breakpoint-xl: 1920px;
+
+  --spacing: 4px;
+
+  --color-yellow: #fcc141;
+  --color-primary: #394155;
+  --color-secondary: #798595;
+
+  --btn-border-radius: 8px;
+
+  --text-small: 14px;
+  --text-small--line-height: 22px;
+  --text-body-medium-tablet: 18px;
+  --text-body-medium-tablet--line-height: 26px;
+  --text-body-medium-desktop: 20px;
+  --text-body-medium-desktop--line-height: 30px;
+}
