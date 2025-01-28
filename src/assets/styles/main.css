@@ -4,6 +4,11 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+html,
+body {
+  scrollbar-gutter: auto !important;
+}
+
 body {
   font-family: 'Formular', Arial, sans-serif;
 }
@@ -24,5 +29,4 @@ html {
 
 ::-webkit-scrollbar-track {
   background: #373a40;
-  border-radius: 8px;
 }

@@ -3,64 +3,66 @@
     <div
       class="p-[30px] gap-[50px] flex w-full rounded-[8px] bg-white shadow-[0px_4px_15px_0px_rgba(0,0,0,0.05)] dark:bg-gray-600"
     >
-      <Transition name="fade" mode="out-in">
-        <div v-if="isLoading && !isDataLoaded" class="w-full text-center dark:text-white">
-          {{ $t('loading') }}...
-        </div>
-        <div
-          v-else-if="isDataLoaded"
-          class="flex w-full gap-5 justify-between flex-col sm:flex-row"
-        >
+      <slot>
+        <Transition name="fade" mode="out-in">
+          <div v-if="isLoading && !isDataLoaded" class="w-full text-center dark:text-white">
+            {{ $t('loading') }}...
+          </div>
           <div
-            class="flex lg:gap-[60px] md:gap-[50px] flex-col sm:flex-column md:flex-row items-start md:items-center"
+            v-else-if="isDataLoaded"
+            class="flex w-full gap-5 justify-between flex-col sm:flex-row"
           >
-            <div class="flex items-center gap-5 text-primary dark:text-white">
-              <img src="../../assets/images/google.png" alt="Google logo" class="w-10 h-10" />
-              <p
-                class="text-body-medium-tablet leading-body-medium-tablet--line-height md:text-body-medium-desktop md:leading-body-medium-desktop--line-height font-formular-medium dark:text-white"
-              >
-                {{ $t('reviewsTitle') }}
-              </p>
-            </div>
             <div
-              class="flex gap-[6px] sm:gap-5 flex-col mt-5 md:mt-0 sm:mt-[11px] sm:flex-row items-start sm:items-center"
+              class="flex lg:gap-[60px] md:gap-[50px] flex-col sm:flex-column md:flex-row items-start md:items-center"
             >
               <div class="flex items-center gap-5 text-primary dark:text-white">
+                <img src="../../assets/images/google.png" alt="Google logo" class="w-10 h-10" />
                 <p
-                  v-if="feedback"
-                  class="text-[24px]/[32px] md:text-[36px]/[44px] font-greenwich-medium"
+                  class="text-body-medium-tablet leading-body-medium-tablet--line-height md:text-body-medium-desktop md:leading-body-medium-desktop--line-height font-formular-medium dark:text-white"
                 >
-                  {{ feedback.mark }}
+                  {{ $t('reviewsTitle') }}
                 </p>
-                <StarsRating v-if="feedback" :rating="feedback.mark" />
               </div>
-              <div class="text-secondary dark:text-white text-small leading-small--line-height">
-                <p v-if="feedback">
-                  {{ feedback.count }} {{ uaRewiewsWordNormalize(feedback.count) }}
-                </p>
+              <div
+                class="flex gap-[6px] sm:gap-5 flex-col mt-5 md:mt-0 sm:mt-[11px] sm:flex-row items-start sm:items-center"
+              >
+                <div class="flex items-center gap-5 text-primary dark:text-white">
+                  <p
+                    v-if="feedback"
+                    class="text-[24px]/[32px] md:text-[36px]/[44px] font-greenwich-medium"
+                  >
+                    {{ feedback.mark }}
+                  </p>
+                  <StarsRating v-if="feedback" :rating="feedback.mark" />
+                </div>
+                <div class="text-secondary dark:text-white text-small leading-small--line-height">
+                  <p v-if="feedback">
+                    {{ feedback.count }} {{ uaRewiewsWordNormalize(feedback.count) }}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            class="flex items-center gap-[10px] flex-col sm:min-w-[150px] sm-transitional:flex-row sm-transitional:min-w-auto"
-          >
-            <BaseButton
-              class="w-full sm-transitional:w-auto"
-              variant="secondary"
-              @click="
-                openLink(
-                  'https://uk.wikipedia.org/wiki/%D0%9C%D1%96%D0%BB%D0%B0%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80',
-                  '_blank',
-                )
-              "
-              >{{ $t('lookOver') }}</BaseButton
+            <div
+              class="flex items-center gap-[10px] flex-col sm:min-w-[150px] sm-transitional:flex-row sm-transitional:min-w-auto"
             >
-            <BaseButton class="w-full sm:w-auto" variant="primary" @click="switchTheme">{{
-              $t('changeTheme')
-            }}</BaseButton>
+              <BaseButton
+                class="w-full sm-transitional:w-auto"
+                variant="secondary"
+                @click="
+                  openLink(
+                    'https://uk.wikipedia.org/wiki/%D0%9C%D1%96%D0%BB%D0%B0%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80',
+                    '_blank',
+                  )
+                "
+                >{{ $t('lookOver') }}</BaseButton
+              >
+              <BaseButton class="w-full sm:w-auto" variant="primary" @click="switchTheme">{{
+                $t('changeTheme')
+              }}</BaseButton>
+            </div>
           </div>
-        </div>
-      </Transition>
+        </Transition>
+      </slot>
     </div>
   </section>
 </template>
