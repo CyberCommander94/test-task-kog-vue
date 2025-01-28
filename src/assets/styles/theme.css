@@ -4,7 +4,9 @@
   --font-greenwich-medium: 'Greenwich Medium', Arial, sans-serif;
 
   --breakpoint-*: initial;
+  --breakpoint-xs: 360px;
   --breakpoint-sm: 577px;
+  --breakpoint-sm-transitional: 800px;
   --breakpoint-md: 1200px;
   --breakpoint-lg: 1367px;
   --breakpoint-xl: 1920px;
@@ -14,12 +16,6 @@
   --color-yellow: #fcc141;
   --color-primary: #394155;
   --color-secondary: #798595;
-
-  --btn-primary-bg: linearGradient(to right #3cb9a0, #1786ac);
-  --btn-secondary-bg: linearGradient(to right #e6f7f5, #f8fcfc);
-  --btn-hover-bg: #36a8a0;
-
-  --btn-secondary-border-color: linearGradient(to right #aacedb, #bee2e0);
 
   --btn-border-radius: 8px;
 

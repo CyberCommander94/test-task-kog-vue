@@ -1,9 +1,13 @@
 {
-  "reviews_title": "Reviews of our customers on Google",
-  "look_over": "Look over",
+  "reviewsTitle": "Reviews of our visitors on Google",
+  "lookOver": "Look over",
+  "changeTheme": "Switch theme",
   "reviews": "reviews",
-  "reviews_variant_2": "reviews",
+  "reviewsVariant2": "reviews",
   "review": "review",
   "pageNotFound": "Page not found",
-  "backToTheHomePage": "Back to the home page"
+  "backToTheHomePage": "Back to the home page",
+  "mainTitle": "Milan Cathedral",
+  "loading": "Loading",
+  "mainText": "Cathedral in Milan, dedicated to the Nativity of the Holy Virgin Mary. Built in the Gothic style from white marble. It is one of the largest cathedrals in the world, the second largest Gothic cathedral (after Seville Cathedral) and the second largest cathedral in Italy (after St. Peter's Cathedral in Rome)."
 }
